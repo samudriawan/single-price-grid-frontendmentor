@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-[Solution URL](https://www.frontendmentor.io/solutions/responsive-mobilefirst-with-sass-using-flexbox-and-grid-l7S0lelWI) |
+[Solution URL](https://www.frontendmentor.io/solutions/responsive-mobilefirst-with-sass-using-flexbox-and-grid-zYIHJLwQr) |
 [Live Site URL](https://samudriawan.github.io/single-price-grid-frontendmentor/) |
 [Challenge](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc)
 
