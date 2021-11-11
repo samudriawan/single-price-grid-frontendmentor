@@ -1,0 +1,145 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	max-width: 1440px;
+	min-height: 100%;
+	margin: auto;
+	font-family: $ff-body;
+	background-color: $neutral-light-color;
+	@include flex(center, column);
+}
+
+section {
+	width: 90%;
+	margin-top: auto;
+	border-radius: 0.35em;
+	overflow: hidden;
+	@include flex(center, column);
+
+	.description {
+		padding: 1.5em 1em;
+		background-color: white;
+
+		h1 {
+			color: $primary-color;
+		}
+
+		h3 {
+			padding-top: 1em;
+			padding-bottom: 1em;
+			color: $secondary-color;
+		}
+		p {
+			font-size: $f-size;
+			line-height: 1.5;
+			color: $neutral-color;
+		}
+	}
+
+	.subscription {
+		width: 100%;
+		padding: 1.5em 1em;
+		color: white;
+		background-color: $primary-color;
+
+		h1,
+		p {
+			width: 100%;
+		}
+		.price {
+			@include flex(flex-start, row);
+			line-height: 2;
+			color: $neutral-light-color;
+
+			span {
+				color: white;
+				font-weight: 700;
+				font-size: 2em;
+				padding-right: 1ch;
+			}
+		}
+
+		a {
+			width: 100%;
+			display: block;
+			margin-top: 1em;
+			padding: 1em;
+			border-radius: 0.4em;
+			text-decoration: none;
+			text-align: center;
+			color: white;
+			background-color: $secondary-color;
+			box-shadow: 2px 2px 8px 0 rgba(#000, 0.2), 4px 4px 11px 0 rgba(#000, 0.15);
+		}
+	}
+
+	.features {
+		width: 100%;
+		padding: 1.5em 1em;
+		background-color: $primary-light-color;
+
+		h1 {
+			color: white;
+			padding-bottom: 1em;
+		}
+		ul {
+			list-style: none;
+			width: 100%;
+
+			li {
+				color: $neutral-light-color;
+			}
+		}
+	}
+}
+
+// attribution
+footer {
+	margin-top: auto;
+	font-size: 11px;
+	text-align: center;
+	a {
+		color: hsl(228, 45%, 44%);
+	}
+}
+
+// media query breakpoint
+@include media {
+	section {
+		max-width: 650px;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(1em, auto));
+		grid-template-rows: repeat(2, minmax(1em, auto));
+		align-items: center;
+
+		.description {
+			grid-column: span 2;
+			padding: 2em;
+			padding-right: 2.5em;
+			align-self: center;
+		}
+
+		.subscription {
+			align-self: center;
+			height: 100%;
+			padding: 2em;
+		}
+
+		.features {
+			padding: 2em;
+		}
+	}
+}
